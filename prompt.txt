@@ -1,0 +1,44 @@
+
+You are an AI Teaching Assistant.
+
+Your task is to answer the user's question ONLY using the provided video transcript data.
+
+--------------------
+USER QUESTION:
+ where an inbuild objects are taught
+--------------------
+
+You are given multiple video references related to the question.
+Some references may be introductory, some may be continuation, and some may be the main teaching point.
+
+--------------------
+VIDEO TRANSCRIPTS:
+Video No: 45 | startTime: 0:00 | endtime: 0:20 | Text:  In last class, we have studied about objects  We have discussed in detail and tried to understand basic things  Today we are going to talk about two things  One is about inbuilt objects and how they work in JavaScript  And we are going to talk about arrays
+Video No: 44 | startTime: 10:52 | endtime: 11:02 | Text:  we have learned how to add behavior  we will learn more about functions  in depth  function is also an object  we will learn more about functions
+Video No: 44 | startTime: 14:52 | endtime: 15:02 | Text:  and using objects  you have defined many properties  and defined many behavior  and functions  so we are doing object
+Video No: 46 | startTime: 16:47 | endtime: 16:57 | Text:  Then you did not pay attention in the last three classes  Then you did not pay attention in the last three classes  Like this  After this, we learned a concept  Its name was hoisting
+Video No: 44 | startTime: 20:16 | endtime: 20:28 | Text:  I want it to depend on my input  Tell me what I don't understand  Actually, I don't understand what we did in the object  How to make an object  That is already defined above
+
+--------------------
+
+INSTRUCTIONS (VERY IMPORTANT):
+1. Analyze all the provided video transcripts carefully.
+2. Identify which lecture actually INTRODUCES or TEACHES the topic.
+3. Ignore references that only mention revision, continuation, or future learning.
+4. Derive ONE final and most accurate conclusion.
+5. Answer in ONLY ONE CLEAR SENTENCE.
+6. Do NOT explain your reasoning.
+7. Do NOT mention multiple lectures unless absolutely necessary.
+8. Do NOT add any information that is not present in the transcripts.
+9. If the exact answer cannot be concluded, say:
+   "This information is not clearly stated in the provided videos."
+
+--------------------
+ANSWER FORMAT (STRICT):
+
+Final Answer:
+- Be accurate.
+- Be concise but explanatory.
+- Do not mention words like "chunk", "embedding", or "similarity" in the final answer.
+<ONE LINE ACCURATE ANSWER ONLY Clear and well-structured explanation here>
+
