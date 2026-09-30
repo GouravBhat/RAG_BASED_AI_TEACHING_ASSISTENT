@@ -1,26 +1,26 @@
-## create your Rag based ai teaching assitence follow these steps 
+## RAG-Based AI Teaching Assistant
 
-# step-1 
-first paste your vedios in vedios folder
+### Project Architecture
+![Rag-Teaching-Assistance-Architecture](assets/Rag-Architecture.jpg)
 
-# step-2
- convert your vedios into audio by using convert_vedio_into_audio.py and placed them in speech folder
+### Project Workflow
 
-# step-3
+1. **Video → Audio**  
+   Place lecture videos in the `videos` folder and convert them to audio using `convert_video_into_audio.py`. The audio files are stored in `speech`.
 
-convert your speech into json chunks by using voice_into_text and placed them in output
+2. **Audio → Text**  
+   Use `voice_into_text.py` to transcribe the audio into timestamped JSON chunks and save them in `output`.
 
-# step-4
+3. **Text → Embeddings**  
+   Convert the JSON chunks into embeddings using `convert_into_embedding.py` and store the resulting dataframe in `mydata.joblib`.
 
-convert these json chunks into embedding and make the dataframe of these embeddings and safe it mydata.joblib using the convert_into_embeddig.py
+4. **Retrieval + LLM Response**  
+   `check_cosine_similarity.py` compares the user query with stored embeddings, retrieves the **top 5 relevant chunks**, and sends them to the LLM to generate a grounded answer.
 
- # step-5
+### Chunk Optimization
 
-now use these mydata.joblib and check the cosine similarity and take top 5 data as per query and send them to llm model now llm model gives you answer .All these steps done in 
-# check_cosine_similarity.py
+To improve retrieval accuracy, consecutive chunks from each lecture are merged into larger **5-chunk groups** and stored in `newChunks`. The same embedding and retrieval pipeline is then applied to these optimized chunks.
 
-## we now preprocess the model to increase it accuracy we join chunks together from each json for make it less like 5-5 chunks from each json 
+### Conclusion
 
-now we store tese chunks in newChunks and all things gone same from step-4 to step - 5
-
-## conclude the project
+The project uses a **RAG pipeline** to convert lecture videos into searchable knowledge and generate context-aware answers from the relevant lecture content.
