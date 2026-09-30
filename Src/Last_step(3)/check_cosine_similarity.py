@@ -1,10 +1,16 @@
 import numpy as np 
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
+
+from rich.console import Console
+from rich.panel import Panel
 import joblib
 import requests
 import json
 
+
+# ---------------- INIT ----------------
+console = Console()
 df=joblib.load('mydata.joblib')
 model = SentenceTransformer("all-MiniLM-L6-v2")
 def sec_to_min(seconds):
@@ -15,6 +21,7 @@ def sec_to_min(seconds):
 
 
 def inference_stream(prompt):
+    console.print(Panel("🤖 AI Answer", style="bold green"))
     r = requests.post(
         "http://localhost:11434/api/generate",
         json={
@@ -44,12 +51,16 @@ def inference_stream(prompt):
 
     
 
-question=input("ask the question")
+console.clear()
+console.print(Panel("🎓 AI Teaching Assistant", style="bold cyan"))
+
+question = console.input("\n[bold yellow]❓ Ask your question: [/bold yellow]")
+console.print("\n[italic green]⏳ Thinking...[/italic green]\n")
 question_embedding=model.encode([question])[0]
 # print(np.vstack(df['embedding'].values))
 
 similarities = cosine_similarity(np.vstack(df['embedding'].values),[question_embedding]).flatten()
-top_result=similarities.argsort()[::-1][0:5]
+top_result=similarities.argsort()[::-1][0:10]
 new_df=df.loc[top_result].copy()
 new_df['start']=new_df['start'].apply(sec_to_min)
 new_df['end']=new_df['end'].apply(sec_to_min)

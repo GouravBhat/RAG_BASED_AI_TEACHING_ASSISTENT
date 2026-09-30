@@ -5,7 +5,7 @@ Your task is to answer the user's question ONLY using the provided video transcr
 
 --------------------
 USER QUESTION:
- where an inbuild objects are taught
+in which lecture array taught
 --------------------
 
 You are given multiple video references related to the question.
@@ -13,11 +13,16 @@ Some references may be introductory, some may be continuation, and some may be t
 
 --------------------
 VIDEO TRANSCRIPTS:
+Video No: 45 | startTime: 47:31 | endtime: 47:41 | Text:  We have not studied anything special  Let's move forward  What is an array?  Tell me  I am sleepy today
+Video No: 44 | startTime: 11:02 | endtime: 11:12 | Text:  dedicated to arrays  we will learn about objects in this class  let's understand what is function  function is a program  or sub program
 Video No: 45 | startTime: 0:00 | endtime: 0:20 | Text:  In last class, we have studied about objects  We have discussed in detail and tried to understand basic things  Today we are going to talk about two things  One is about inbuilt objects and how they work in JavaScript  And we are going to talk about arrays
-Video No: 44 | startTime: 10:52 | endtime: 11:02 | Text:  we have learned how to add behavior  we will learn more about functions  in depth  function is also an object  we will learn more about functions
-Video No: 44 | startTime: 14:52 | endtime: 15:02 | Text:  and using objects  you have defined many properties  and defined many behavior  and functions  so we are doing object
-Video No: 46 | startTime: 16:47 | endtime: 16:57 | Text:  Then you did not pay attention in the last three classes  Then you did not pay attention in the last three classes  Like this  After this, we learned a concept  Its name was hoisting
-Video No: 44 | startTime: 20:16 | endtime: 20:28 | Text:  I want it to depend on my input  Tell me what I don't understand  Actually, I don't understand what we did in the object  How to make an object  That is already defined above
+Video No: 45 | startTime: 31:42 | endtime: 31:54 | Text:  What did you understand?  We understood about an array, what we are going to read, we will see  Before insertion, we will see one simple thing  We will learn how to create an array  I taught you how to create an array
+Video No: 45 | startTime: 34:02 | endtime: 34:17 | Text:  DSA students will know what I am talking about  What is the meaning of arr  I have created an array  Let's write numbers of 0  What is the meaning of this?
+Video No: 45 | startTime: 118:46 | endtime: 120:36 | Text:  What is in the output, student number 7, student number 8, student number 9, student number 10, what did you understand, so we have created a mapping in this way, what we have said, we had values in the starting, 7, 8, 9, 10, 0th index 7,  I will print it here, console.log, what we have said, I had 7 on 0th index, 8 on 1th index, 9 on 2nd index, 10 on 3rd index, I have mapped one more thing here, what I have said, iterate on this whole array of numbers,  So this is a very bad example, as we move forward, we will make some productive things, we will make some logical things, we will make a project, I think we have made mini projects for 2 weeks, where we will implement JS a lot and make a project,  So there we will see its official use, its practical use, where its practical usage can come, not now, when it will become a mini project, when it will become a major project, when it will become an intermediate project, then it will be understood,  Now our target of this lecture is that we should understand syntax, how to apply, so what you have learned now, if I want to apply map, then I will put map function on the array, I will write predicate function in the map, if possible, I will convert the predicate function into arrow function
+Video No: 45 | startTime: 30:20 | endtime: 30:43 | Text:  What is an array?  We have read just two classes ago that we have read arrays and functions in objects  So, we have said that in JavaScript, an array is also a type of object  It is a reference type  We have given a small overview that it is a collection of items
+Video No: 45 | startTime: 0:20 | endtime: 0:49 | Text:  And we are going to talk about arrays and how they work in JavaScript  So, today we are going to study about inbuilt objects and arrays  So, first of all, we are going to study about Math Object  As we can understand from the name, Math Object is a mathematical calculation  It has mathematical functions and methods which we are using to do many things
+Video No: 44 | startTime: 72:51 | endtime: 73:01 | Text:  here you have told objects  here you have told arrays  here you have told arrays  we have to keep in mind  all the data in reference type
+Video No: 45 | startTime: 43:52 | endtime: 44:43 | Text:  great,  I have put the name of the course in the console.log  Let's check  So what we can see is that there are two elements in this array  In the zeroth index, I have this object of love and in the first index, I have this object of Rahul
 
 --------------------
 
